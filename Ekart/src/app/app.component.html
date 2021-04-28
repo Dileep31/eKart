@@ -1,10 +1,32 @@
-<html>
-  <head>
+<head>
     <title>
       welcome page
     </title>
   </head>
   <body>
-    Hai {{title}}
+    <h1>Hai {{title}}</h1>
+    <h2>
+      welcome to {{Appname}}
+    </h2>
+    TextBox1 <input type="text" value="{{Appname}}" id = "textbox1" >
+    TextBox1 <input type="text" [value]='title' id = "textbox1" >
+
+    <br>
+
+    Interpolation <input type = "text" value = "{{Appname}}" disabled = {{flag}} > <br>
+
+    Proprty Binding <input type = "text" value = "{{Appname}}" [disabled] = 'flag' >
+    <!-- property binding must be used for non string values -->
+
+
+
+
+    <!-- Class Binding-->
+
+    <div [class]="myclass">Hello from myclass</div>
+
+    <h2 [style.color] = "red" >Hello from Style Binding</h2>
+
+    <h2 [style.font-size.px] = '35' [style.color] = "red" >hello from style binding on size</h2>
   </body>
-</html>
+
